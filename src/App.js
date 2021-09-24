@@ -20,6 +20,9 @@ const App = () => {
         <Route key="dashboard" exact path="/dashboard/farmer">
           <Dashboard />
         </Route>
+        <Route path="/">
+          <Landing />
+        </Route>
       </Switch>
     </Router>
   );
