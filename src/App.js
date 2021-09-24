@@ -1,6 +1,6 @@
 import React from "react";
 import SignIn from "./components/SignIn";
-import Checkout from "./components/SignUp";
+import SignUp from "./components/SignUp";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./pages/Landing/index";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -11,13 +11,13 @@ const App = () => {
         <Route key = "home" exact path="/">
           <Landing />
         </Route>
-        <Route key="signin" exact path="/signin/farmer">
+        <Route key="signin" exact path="/signin">
           <SignIn />
         </Route>
-        <Route key="signup" exact path="/signup/farmer">
-          <Checkout />
+        <Route key="signup" exact path="/signup">
+          <SignUp />
         </Route>
-        <Route key="dashboard" exact path="/dashboard/farmer">
+        <Route key="dashboard" exact path="/dashboard">
           <Dashboard />
         </Route>
         <Route path="/">
