@@ -7,12 +7,12 @@ import AboutUs from './AboutUs/AboutUs'
 
 const index = () => {
     return (
-        <>
-          <Navbar/> 
-          <Hero/>
-          <AboutUs/>
-        </>
-    )
+      <>
+        <Navbar />
+        <Hero />
+        <AboutUs />
+      </>
+    );
 }
 
 export default index
