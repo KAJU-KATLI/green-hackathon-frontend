@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
-import Hero from '../../components/Hero/Hero'
+import Navbar from '../../Components/Navbar'
+import Hero from '../../Components/Hero/Hero'
 
 
 const index = () => {
