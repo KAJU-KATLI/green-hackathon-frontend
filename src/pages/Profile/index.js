@@ -1,7 +1,7 @@
 import React from "react";
-import MajorDetails from "../../components/Profile/MajorDetails";
-import PersonalDetails from "../../components/Profile/PersonalDetails";
-import ProfessionalDetails from "../../components/Profile/ProfessionalDetails";
+import MajorDetails from "./components/MajorDetails";
+import PersonalDetails from "./components/PersonalDetails";
+import ProfessionalDetails from "./components/ProfessionalDetails";
 
 const Index = () => {
   return (

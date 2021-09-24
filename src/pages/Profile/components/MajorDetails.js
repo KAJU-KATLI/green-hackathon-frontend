@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import image from "../../assets/heroFarmer.png";
+import image from "../../../assets/heroFarmer.png";
 
 export default function MajorDetails() {
   return (
