@@ -20,8 +20,6 @@ import History from "../../pages/History/index";
 import Profile from "../../pages/Profile/index";
 import Sell from "../../pages/Sell/index";
 
-
-
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
@@ -139,7 +137,7 @@ function DashboardContent() {
             }}
           >
             <Toolbar />
-            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            <Container maxWidth="xl" sx={{ mt: 4, mb: 4 }}>
               <Switch>
                 <Route key="profile" exact path="/dashboard/profile">
                   <Profile />
