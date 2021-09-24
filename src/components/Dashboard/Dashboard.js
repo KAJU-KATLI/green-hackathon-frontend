@@ -10,7 +10,6 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { mainListItems } from "./listItems";
@@ -82,7 +81,7 @@ function DashboardContent() {
       <ThemeProvider theme={mdTheme}>
         <Box sx={{ display: "flex" }}>
           <CssBaseline />
-          <AppBar position="absolute" open={open}>
+          <AppBar position="absolute" open={open} color="success">
             <Toolbar
               sx={{
                 pr: "24px", // keep right padding when drawer closed
