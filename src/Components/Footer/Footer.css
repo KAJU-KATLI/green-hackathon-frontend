@@ -1,12 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 .footer {
-  background: linear-gradient(
-      180deg,
-      #ffffff 11.95%,
-      rgba(255, 255, 255, 0) 92.3%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(231, 189, 251, 0.5) -29.81%,
-      rgba(250, 208, 218, 0.5) 110.29%
-    );
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
 }

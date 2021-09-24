@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import heroimg from "../../assets/heroFarmer.png";
+import heroimg from "../../../assets/heroFarmer.png";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
