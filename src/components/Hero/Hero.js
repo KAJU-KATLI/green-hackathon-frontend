@@ -25,6 +25,7 @@ const Hero = () => {
               fontWeight: "bold",
               marginBottom: "40px",
             }}
+            className = "Heading"
           >
             Connecting
             <br />

@@ -29,6 +29,9 @@
     .text {
       text-align: center;
     }
+    .Heading{
+        font-size: xxx-large !important;
+    }
     .btns{
         flex-direction: column;
     }

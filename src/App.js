@@ -1,16 +1,27 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import SignIn from "./components/SignIn";
+import Checkout from "./components/SignUp/Checkout";
+import Dashboard from "./components/Dashboard/Dashboard";
 import Landing from "./pages/Landing/index";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
-        <Route exact path="/">
+        <Route path="/">
           <Landing />
         </Route>
+        <Route key="signin" path="/signin/farmer">
+          <SignIn />
+        </Route>
+        <Route key="signup" path="/signup/farmer">
+          <Checkout />
+        </Route>
+        <Route key="dashboard" path="/dashboard/farmer">
+          <Dashboard />
+        </Route>
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
 };
 
