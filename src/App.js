@@ -1,12 +1,16 @@
 import React from "react";
-import SignIn from "./Components/SignIn";
-import Checkout from "./Components/SignUp/Checkout";
-import Dashboard from "./Components/Dashboard/Dashboard";
+import SignIn from "./components/SignIn";
+import Checkout from "./components/SignUp/Checkout";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Landing from "./pages/Landing/index";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const App = () => {
   return (
     <Router>
       <Switch>
+        <Route path="/">
+          <Landing />
+        </Route>
         <Route key="signin" path="/signin/farmer">
           <SignIn />
         </Route>

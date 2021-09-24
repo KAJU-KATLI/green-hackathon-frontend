@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.hero {
+  background: linear-gradient(
+    102.28deg,
+    rgba(231, 189, 251, 0.5) -7.7%,
+    rgba(250, 208, 218, 0.5) 38.01%,
+    rgba(168, 198, 243, 0.5) 91.43%
+  );
+  margin: 40px;
+  font-family: "Montserrat", sans-serif;
+  padding: 40px;
+}
+
+@media screen and (max-width: 968px) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+  .Image {
+    display: none;
+  }
+  .text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .text {
+      text-align: center;
+    }
+    .Heading{
+        font-size: xxx-large !important;
+    }
+    .btns{
+        flex-direction: column;
+    }
+  }
