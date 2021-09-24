@@ -35,10 +35,13 @@ const Navbar = () => {
           <MenuIcon />
         </IconButton>
         <Typography
-          variant="h6"
+          variant="h3"
           component="div"
           sx={{ flexGrow: 1 }}
-        ></Typography>
+          style = {{ textAlign:"center"}}
+        >
+          Farmactors
+        </Typography>
         <Button color="success" variant="contained">
           Login
         </Button>
