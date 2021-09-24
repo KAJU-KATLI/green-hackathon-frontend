@@ -1,17 +1,9 @@
 import React from "react";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
 import "./AboutUs.css";
 
 const AboutUs = () => {
-  const containerStyles = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "50px",
-    padding: "40px 50px 50px 50px",
-  };
   return (
     <div>
       <h1
@@ -23,7 +15,7 @@ const AboutUs = () => {
       >
         ABOUT US
       </h1>
-      <Container style={containerStyles} className="container">
+      <div className="container">
         <div className="left box">
           <Typography
             variant="h2"
@@ -62,7 +54,7 @@ const AboutUs = () => {
             services accessible to all and on-demand for every need.
           </h4>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };

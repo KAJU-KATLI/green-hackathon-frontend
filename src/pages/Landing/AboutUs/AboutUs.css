@@ -2,10 +2,15 @@
 
 .container {
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px 50px 50px 50px;
 }
 
-.box_head{
-    text-align: center;
+.box_head {
+  text-align: center;
 }
 
 .box {
@@ -16,4 +21,10 @@
     rgba(168, 198, 243, 0.5) 91.43%
   );
   padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
