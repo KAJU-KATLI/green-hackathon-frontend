@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -15,6 +15,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+import FileBase from "react-file-base64";
+import api from "../../api/apiClient";
 
 function Copyright(props) {
   return (
@@ -37,14 +39,21 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const [user, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    address: "",
+    age: null,
+    phoneNumber: null,
+    who: "",
+    image: "",
+    username: "",
+    password: "",
+  });
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    const register = await api.post("/register", user);
+    console.log(user);
   };
 
   return (
@@ -84,6 +93,10 @@ export default function SignUp() {
                   fullWidth
                   id="firstName"
                   label="First Name"
+                  value={user.firstName}
+                  onChange={(e) => {
+                    setUser({ ...user, firstName: e.target.value });
+                  }}
                   autoFocus
                 />
               </Grid>
@@ -93,6 +106,10 @@ export default function SignUp() {
                   id="lastName"
                   label="Last Name"
                   name="lastName"
+                  value={user.lastName}
+                  onChange={(e) => {
+                    setUser({ ...user, lastName: e.target.value });
+                  }}
                   autoComplete="lname"
                 />
               </Grid>
@@ -104,6 +121,10 @@ export default function SignUp() {
                   id="age"
                   label="Age"
                   name="age"
+                  value={user.age}
+                  onChange={(e) => {
+                    setUser({ ...user, age: e.target.value });
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -115,6 +136,10 @@ export default function SignUp() {
                   id="contact"
                   label="Contact Number"
                   autoFocus
+                  value={user.phoneNumber}
+                  onChange={(e) => {
+                    setUser({ ...user, phoneNumber: e.target.value });
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -123,17 +148,26 @@ export default function SignUp() {
                   fullWidth
                   id="address"
                   label="Home Address"
-                  name="email"
-                  autoComplete="email"
+                  name="address"
+                  autoComplete="address"
+                  value={user.address}
+                  onChange={(e) => {
+                    setUser({ ...user, address: e.target.value });
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
+                  required
                   fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
+                  id="username"
+                  label="Username"
+                  name="username"
+                  autoComplete="username"
+                  value={user.username}
+                  onChange={(e) => {
+                    setUser({ ...user, username: e.target.value });
+                  }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -145,16 +179,34 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  value={user.password}
+                  onChange={(e) => {
+                    setUser({ ...user, password: e.target.value });
+                  }}
                 />
               </Grid>
             </Grid>
-            <Grid item xs={12} style ={{marginTop:"2%"}}>
-              <FormControl >
+              <Grid item xs={12}>
+                <FormControl>
+                <FormLabel>Upload Image</FormLabel>
+                <FileBase
+                  type="file"
+                  multiple={false}
+                  onDone={({ base64 }) => setUser({ ...user, image: base64 })}
+                />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} style={{ marginTop: "2%" }}>
+              <FormControl>
                 <FormLabel>Who are You?</FormLabel>
                 <RadioGroup
                   aria-label="gender"
                   required
                   name="radio-buttons-group"
+                  value={user.who}
+                  onChange={(e) => {
+                    setUser({ ...user, who: e.target.value });
+                  }}
                 >
                   <FormControlLabel
                     value="farmer"
@@ -162,7 +214,7 @@ export default function SignUp() {
                     label="I am a Farmer"
                   />
                   <FormControlLabel
-                    value="male"
+                    value="contractor "
                     control={<Radio />}
                     label="I am a Contractor"
                   />

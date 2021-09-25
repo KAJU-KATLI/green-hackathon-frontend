@@ -1,5 +1,5 @@
 import { create } from "apisauce";
 
-export default api = create({
-  baseURL: "http://localhost:8080",
+export default create({
+  baseURL: "http://localhost:8080/api",
 });
