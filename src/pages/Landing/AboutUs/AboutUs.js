@@ -9,8 +9,9 @@ const AboutUs = () => {
       <h1
         style={{
           textAlign: "center",
-          marginTop: "100px",
+          marginTop: "50px",
           fontFamily: '"Montserrat", sans-serif',
+          fontSize: "3em",
         }}
       >
         ABOUT US
@@ -23,13 +24,20 @@ const AboutUs = () => {
             style={{
               color: "#23272A",
               fontWeight: "bold",
-              marginBottom: "40px",
+              marginBottom: "20px",
             }}
             className="box_head"
           >
             Our Work
           </Typography>
-          <h4 style={{ color: "white", textAlign: "justify" }}>
+          <h4
+            style={{
+              color: "white",
+              textAlign: "justify",
+              fontSize: "1.1em",
+              padding: "20px",
+            }}
+          >
             Go-To online platform for all the Farmers and Contractors out there.
             We simplify the process of finding a buyer for your produced goods
             as well as finding farmers for any contract
@@ -42,13 +50,20 @@ const AboutUs = () => {
             style={{
               color: "#23272A",
               fontWeight: "bold",
-              marginBottom: "40px",
+              marginBottom: "20px",
             }}
             className="box_head"
           >
             Our Culture
           </Typography>
-          <h4 style={{ color: "white", textAlign: "justify" }}>
+          <h4
+            style={{
+              color: "white",
+              textAlign: "justify",
+              fontSize: "1.1em",
+              padding: "20px",
+            }}
+          >
             We are on a mission to make the farming system more transparent and
             provide an easy interface for all your needs by making the farming
             services accessible to all and on-demand for every need.

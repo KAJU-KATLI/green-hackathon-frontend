@@ -9,6 +9,17 @@
   padding: 40px 50px 50px 50px;
 }
 
+.left:hover {
+  background-color: black;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.right:hover {
+  background-color: black;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .box_head {
   text-align: center;
 }
@@ -21,6 +32,7 @@
     rgba(168, 198, 243, 0.5) 91.43%
   );
   padding: 20px;
+  transition: 0.5s all ease-in-out;
 }
 
 @media screen and (max-width: 768px) {

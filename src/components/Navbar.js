@@ -43,7 +43,12 @@ const Navbar = () => {
           variant="h3"
           component="div"
           sx={{ flexGrow: 1 }}
-          style={{ textAlign: "center" }}
+          style={{
+            textAlign: "center",
+            color: "#000",
+            fontWeight: 700,
+            fontFamily: "sans-serif",
+          }}
         >
           Farmactors
         </Typography>
