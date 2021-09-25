@@ -8,9 +8,6 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/">
-          <Landing />
-        </Route>
         <Route key="signin" path="/signin/farmer">
           <SignIn />
         </Route>
@@ -19,6 +16,9 @@ const App = () => {
         </Route>
         <Route key="dashboard" path="/dashboard/farmer">
           <Dashboard />
+        </Route>
+        <Route path="/">
+          <Landing />
         </Route>
       </Switch>
     </Router>
